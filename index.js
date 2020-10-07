@@ -27,32 +27,47 @@ function promptUser() {
   return inquirer.prompt([
     {
       type: "input",
-      name: "name",
+      name: "Title",
+      message: "What is the title of this Readme.md?: "
+    },
+    {
+      type: "input",
+      name: "Description",
+      message: "Write a brief description of what this program does: "
+    },
+    {
+      type: "input",
+      name: "Table of Contents",
       message: "Question"
     },
     {
       type: "input",
-      name: "location",
+      name: "Installation",
       message: "Question"
     },
     {
       type: "input",
-      name: "hobby",
+      name: "Usage",
+      message: "Write a brief description of Usage cases."
+    },
+    {
+      type: "input",
+      name: "License",
       message: "Question"
     },
     {
       type: "input",
-      name: "food",
+      name: "Contributing",
       message: "Question"
     },
     {
       type: "input",
-      name: "github",
+      name: "Tests",
       message: "Question"
     },
     {
       type: "input",
-      name: "linkedin",
+      name: "Questions",
       message: "Question"
     }
   ]);
@@ -66,7 +81,7 @@ promptUser()
   .then(function(answers) {
     const readMe = generateReadme(answers);
     
-    return writeFileAsync("Readme.md", readMe);
+    return writeFileAsync("README.md", readMe);
     
   })
   .then(function() {
