@@ -1,5 +1,3 @@
-// Pulling additional Javascript file int
-// const generateMarkdown = require("./generateMarkdown.js");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
@@ -73,8 +71,8 @@ function promptUser() {
   ]);
 }
 
-function generateReadme(answers)    {
-    return ``
+function generateReadme()    {
+    return `${answers}`
 };
 
 promptUser()
